@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>16_display.html</title>
+        <style>
+            #mydiv {
+                position: absolute;
+                background-color: yellow;
+                left: 30px;
+                top: 350px;
+                width: 200px;
+                height: 150px;
+                overflow: scroll; /* hidden | Scroll */
+                --display: block; /* none | block 화면출력 */
+                visibility: visible; /* hidden | visible 화면출력 */
+            }
+
+            p {color: red;}
+
+            p.ex1 {display: none;}
+            p.ex2 {display: inline;}
+            p.ex3 {display: block;}
+            p.ex4 {display: inline-block; width: 100px; height: 100px;}
+
+        </style>
+    </head>
+    <body>
+
+        <!-- 참조 https://www.w3schools.com/css/css_display_visibility.asp -->
+
+        <h3>CSS Layout - The display Property </h3>
+
+        <iframe src="13_zindex.html" frameborder="0" width="200px" height="150px"></iframe>
+        <hr>
+        
+        <textarea cols="30" rows="5">속성은 display요소가 표시되는지 여부/방법을 지정합니다.
+            모든 HTML 요소에는 요소 유형에 따라 기본 표시 값이 있습니다. 대부분의 요소에 대한 기본 표시 값은 block또는 입니다 inline.
+        </textarea>
+        <hr>
+
+        <div id="mydiv">
+            이전 장에서 언급했듯이; 블록 수준 요소는 항상 사용 가능한 전체 너비를 차지합니다(가능한 한 왼쪽과 오른쪽으로 확장됨).
+            width블록 수준 요소의 를 설정하면 컨테이너 가장자리까지 늘어나는 것을 방지할 수 있습니다. 그런 다음 여백을 자동으로 설정하여 컨테이너 내에서 요소를 가로로 중앙에 배치할 수 있습니다. 요소는 지정된 너비를 차지하고 나머지 공간은 두 여백 사이에서 동일하게 분할됩니다.
+        </div>
+
+        <br><br><br><br><br><br><br><br>
+
+        <h3>display 세부 속성</h3>
+
+        <!-- display : none-->
+        <div style="display: none;">무궁화</div>
+
+        <!-- block 요소 : 가로영역 전부 채움 width와 height 크기 지정 가능-->
+        <div style="background-color:  red; width: 300px; height: 300px;">오필승</div>
+        <div style="background-color: green;">코리아</div>
+        <p style="background-color: blue;">대한민국</p>
+        <header style="background-color: gold;">무궁화</header>
+        <section style="background-color: gray;">아이티윌</section>
+        <hr>
+
+
+
+        <!-- inline 요소-->
+        <!-- 내용만큼만 영역이 존재 줄바꿈 되지 않음 width와 height크기 지정 불가능-->
+        <span style="background-color: beige; width: 300px; height: 300px;">개나리</span>
+        <span style="background-color: brown;">진달래</span>
+        <hr>
+
+        <!-- inline-block 요소 : 줄바꿈이 되지 않지만 크기 지정 가능. inline-block 중간형태-->
+        <!-- 참조 https://www.w3schools.com/cssref/pr_class_display.asp -->
+
+
+    <h1>The display Property</h1>
+
+    <h2>display: none:</h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. <p class="ex1">HELLO WORLD!</p> Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+    </div>
+
+    <h2>display: inline:</h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. <p class="ex2">HELLO WORLD!</p> Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+    </div>
+
+    <h2>display: block:</h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. <p class="ex3">HELLO WORLD!</p> Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+    </div>
+
+    <h2>display: inline-block:</h2>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. <p class="ex4">HELLO WORLD!</p> Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+    </div>
+
+    </body>
+</html>
