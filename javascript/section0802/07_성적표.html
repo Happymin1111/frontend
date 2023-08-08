@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>07_성적표.html</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3>성적표</h3>
+        <div id="demo"></div>
+        <script>
+
+            let name= "손흥민";
+            let kor=100, eng=30, mat=85;
+
+            let total=kor+eng+mat; // 총점구하기
+            let aver = parseInt(total/3); // 평균구하기.
+
+            if(aver>=90){ 
+                    hak= "A학점";
+                } else if(mat>=80){
+                    hak= "B학점";
+                } else if(mat>=70){ 
+                    hak= "C학점";
+                } else if(mat>=60){
+                    hak= "D학점";
+                } else {
+                    hak= "F학점";
+                }
+
+            if(aver>=70){
+            if( kor >= 40 && mat >= 40 && eng >= 40){
+                res ="합격"
+            } else {
+                res ="재시험"
+            }
+            } else {
+            res = "불합격"
+            }
+
+            switch(parseInt(aver/10)){
+                case 10 : s = "**********"; break;
+                case 9 :  s = "*********"; break;
+                case 8 : s = "********"; break;
+                case 7 : s = "*******"; break;
+                case 6 : s = "******"; break;
+                case 5 : s = "*****"; break;
+                case 4 : s = "****"; break;
+                case 3 : s = "***"; break;
+                case 2 : s = "**"; break;
+                case 1 : s = "*"; break;
+                default : s = "";   
+            }
+
+            if (aver >= 95) {
+                h = "장학생"
+            } else {
+                h = "장학생 아님"
+            }
+
+
+            let result =""; // 결과값
+            result = result + "<table border='1'>";
+            result = result + "<tr>";
+            result = result + "   <th>이름</th>";
+            result = result + "   <td>" + name + "</td>";
+            result = result + "</tr>";
+            
+            result = result + "<tr>";
+            result = result + "   <th>국어</th>";
+            result = result + "   <td>" + kor + "</td>";
+            result = result + "</tr>";
+            
+            result = result + "   <th>영어</th>";
+            result = result + "   <td>" + eng + "</td>";
+            result = result + "</tr>";
+
+            result = result + "   <th>수학</th>";
+            result = result + "   <td>" + mat  + "</td>";
+            result = result + "</tr>";
+
+            result = result + "   <th>총점</th>";
+            result = result + "   <td>" + total  + "</td>";
+            result = result + "</tr>";
+
+            result = result + "   <th>평균</th>";
+            result = result + "   <td>" + aver  + "</td>";
+            result = result + "</tr>";
+
+            result = result + "   <th>결과</th>";
+            result = result + "   <td>" + hak + "<hr>"  + res + "<hr>" + s + "<hr>" + h +"</td>";
+            result = result + "</tr>";
+           
+            result = result + "</table>";
+
+            document.getElementById("demo").innerHTML = result;
+
+
+        </script>
+
+    </body>
+</html>

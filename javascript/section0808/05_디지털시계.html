@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>01_현재날짜.html</title>
+        <meta charset="UTF-8">
+        <style>
+            #clock{
+                width : 500px;
+                height : 40px;
+                color : blue;
+                font-weight: bold;
+                font-size: 30px;
+                position: relative;
+                margin : 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+
+
+
+
+        <h3>디지털 시계</h3>
+        현재날짜 <div id = "clock"></div>
+        <hr>
+
+        <input type="button" value="시작" onclick="showtime()">
+        <input type="button" value="중지" onclick="killtime()">
+
+
+
+
+
+
+        <script>
+            //문제) 날짜변수 d값을 이용해서 날짜 정보를 아래와 같이 구성해서 id=clock에 출력하시오
+
+            function showtime(){
+                const d = new Date(); // 시스템의 현재 날짜 정보 가져오기 (년월일시분초)
+            // 2023.08.08 (화) PM 2:09:13
+            // 글자갯수 2글자 : 월, 일. 분, 초
+            // 오전 AM, 오전 PM  (정오 12시부터)
+
+            let today =""; // 결과 값
+            let da = ""
+
+            today += d.getFullYear() + "."; // 2023.
+            if (d.getMonth()+1 < 10){
+                today +="0"+ (d.getMonth()+1) +".";
+            }else{
+                today += d.getMonth()+1 +".";
+            }
+
+            if (d.getDate() < 10){
+                today += "0"+(d.getDate()) +" ";
+            }else{
+                today += d.getDate() +" ";
+            }
+
+
+
+
+            const days=["일","월","화","수","목","금","토"];
+            today += "("
+            today += days[d.getDay()]+"";
+            today += ")" + " "
+            
+            if(d.getHours()>=12){
+                da = da + "PM"
+            }else{
+                da = da + "AM"
+            }
+            today += da + " ";
+
+            if (d.getHours() < 13){
+                today += (d.getHours()) +":";
+            }else{
+                today += d.getHours() - 12 +":";
+            }
+ 
+            if (d.getMinutes() < 10){
+                today += "0"+(d.getMinutes()) +":";
+            }else{
+                today += d.getMinutes() +":";
+            }
+
+            if (d.getSeconds() < 10){
+                today += "0"+(d.getSeconds()) +"";
+            }else{
+                today +=d.getSeconds() +"";
+            }
+            document.getElementById("clock").innerHTML = today;
+
+            // 1초후에 showtime함수를 호출
+            timer = setTimeout(showtime,1000);
+        }
+
+            let timer; // 전역변수
+
+            function killtime(){
+                clearTimeout(timer)
+            }
+
+          
+           
+        </script>
+
+    </body>
+</html>

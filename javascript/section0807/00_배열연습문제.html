@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>00_배열연습문제.html</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3>배열 연습 문제 </h3>
+        <script>
+
+            let num = [7,8,-5,9,6];
+            let size = num.length; //5
+
+            //document.write(num);
+            document.write("<hr>");
+
+
+          
+           //문1)배열 요소의 전체 합을 구하시오
+            /*let sum = 0;
+            for(let i=0; i<size; i++){
+                sum = sum + num[i];
+            }
+            document.write("1. 배열 요소의 전체 합 = " + sum);
+            document.write("<hr>");*/
+
+            //문2)음수의 갯수를 구하시오
+            /*let dsum = 0;
+            for (let i=0; i<size; i++){
+                if(num[i]<0){
+                    dsum = dsum + 1;
+                }
+            }
+            document.write("2. 음수의 갯수 = " + dsum);
+            document.write("<hr>");*/
+
+            /*
+            //문3)최대값, 최소값을 각각 구하시오
+            let max = 0;
+            for (let i=0; i<size; i++){
+                if(max < num[i]){
+                    max = num[i];
+                }
+            }
+            document.write("3. 최댓값 = " + max);
+
+            document.write("<br>");
+
+            let min = 0;
+            for (let i=0; i<size; i++){
+                if(min > num[i]){
+                    min = num[i];
+                }
+            }
+            document.write("최솟값 = " + min);
+            document.write("<hr>");
+
+
+            document.write("4.");
+            document.write("<br>");
+            */
+            //문4)num[4]요소의 등수를 구하시오.
+            /*
+            if (6<7)
+            if (6<8)
+            if (6<-5)
+            if (6<9)
+            */
+            /*let nums = 0;
+
+            if (num[0]<num[1]){
+                nums = num[0];
+                num[0] = num[1];
+                num[1] = nums;
+                }
+            if (num[0]<num[2]){
+            nums = num[0];
+            num[0] = num[2];
+            num[2] = nums;
+            }
+            if (num[0]<num[3]){
+            nums = num[0];
+            num[0] = num[3];
+            num[3] = nums;
+            }
+            if (num[0]<num[4]){
+            nums = num[0];
+            num[0] = num[4];
+            num[4] = nums;
+            }
+            if (num[1]<num[2]){
+            nums = num[1];
+            num[1] = num[2];
+            num[2] = nums;
+            }
+            if (num[1]<num[3]){
+            nums = num[1];
+            num[1] = num[3];
+            num[3] = nums;
+            }
+            if (num[1]<num[4]){
+            nums = num[1];
+            num[1] = num[4];
+            num[4] = nums;
+            }
+            if (num[2]<num[3]){
+            nums = num[2];
+            num[2] = num[3];
+            num[3] = nums;
+            }
+            if (num[2]<num[4]){
+            nums = num[2];
+            num[2] = num[4];
+            num[4] = nums;
+            }
+            if (num[3]<num[4]){
+            nums = num[3];
+            num[3] = num[4];
+            num[4] = nums;
+            }
+            for(i=0;i<num.length;i++){
+                document.write(i+1 + "등 : " + num[i]);
+                document.write("<br>");
+            }
+            document.write("<hr>"); */
+
+            /*문4)num[4]요소의 등수를 구하시오.
+            num.sort(function(a,b){return b-a});
+            for(i=0;i<num.length;i++){
+                document.write( i+1 + "등 : " + num[i]);
+                document.write("<br>");
+            }*/
+
+            //문4)num[4]요소의 등수를 구하시오.
+            /*
+            if (6<7)
+            if (6<8)
+            if (6<-5)
+            if (6<9)
+            */
+
+            /*4번 스왑이용*/
+            let nums = 0;
+            
+            for(i=0;i<size;i++){
+                for(j=i+1;j<size;j++){
+                if (num[i]<=num[j]){
+                nums = num[i];
+                num[i] = num[j];
+                num[j] = nums;
+                }
+            }
+                document.write(i+1 + "등 : " + num[i]);
+                document.write("<br>");
+            }
+            
+            document.write("<hr>"); 
+            document.write("<hr>"); 
+
+            
+
+             //문1)배열 요소의 전체 합을 구하시오
+             document.write(num[0]+num[1]+num[2]+num[3]+num[4]);
+             document.write("<hr>"); 
+
+             let hap=0;
+             for(let i=0;i<size;i++){
+                hap=hap+num[i];
+             }
+             document.write(hap);
+             document.write("<hr>"); 
+
+             let sum=0;
+             for (i in num){
+                sum=sum+num[i];
+             }
+             document.write(sum); 
+             document.write("<hr>");
+             //////////////////////////////////////////////////////////////////////
+             //문2)음수의 갯수를 구하시오
+             /*
+             7<0 if(num[0]<0)
+             8<0 if(num[1]<0)
+             -5<0if(num[2]<0)
+             9<0if(num[3]<0)
+             6<0if(num[4]<0)
+
+             */
+            let count=0;
+            for(let i=0; i<size; i++){
+                if(num[i]<0) 
+                count = count + 1;
+            }
+            document.write("음수의 개수 = " + count);
+            document.write("<hr>"); 
+
+            // 문3) 최댓값, 최솟값을 각각 구하시오. (9,-5)
+
+            // 1) 내림차순 정렬한 후 최댓값과 최솟값 구하기.
+            num.sort(function(a,b){return b-a});
+            document.write(num[0]); // 최댓값
+            document.write("<hr>"); 
+            document.write(num[4]); // 최솟값
+            document.write("<hr>"); 
+            document.write(num[size-1]); // 최솟값
+            document.write("<hr>"); 
+
+            // 오름차순 정렬 후 최댓값과 최솟값 구하기.
+            num.sort(function(a,b){return a-b});
+            document.write(num[0]); // 최솟값
+            document.write("<hr>"); 
+            document.write(num[4]); // 최댓값
+            document.write("<hr>"); 
+
+
+            // 2)
+            /*document.write(Math.max(...num));
+            document.write("<hr>"); 
+            document.write(Math.min(...num));
+            document.write("<hr>"); */
+            
+            // 3)
+            let max=num[0]; //최댓값
+            let min=num[0]; // 최솟값
+
+            for (let i=0; i<size; i++){
+                if(max<num[i]){
+                    max=num[i];
+                }
+
+                if(min>num[i]){
+                    min=num[i];
+                }
+            }
+
+            document.write("최댓값 : " + max);
+            document.write("<hr>");
+            document.write("최솟값 : " + min);
+            document.write("<hr>");
+            
+
+            // 문4)num[4] 요소의 등수를 구하시오 (4)
+            /*
+
+            if(6<7) r=1+1
+            if(6<8) r=2+1
+            if(6<-5)
+            if(6<9) r=3+1
+            if(6<6)
+
+            */
+
+            let r=1;
+            for(let i=0; i<size; i++){
+                if(num[4] < num[i]){
+                    r=r+1;
+                }
+            }
+
+            document.write(num); // 7,8,-5,9,6
+            document.write("<hr>");
+            document.write(num[4] + " 요소의 등수 : " + r);
+            document.write("<hr>");
+
+            // 문5 ) num 배열의 요소의 각각의 등수를 모두 구하시오.
+            let rank=[1, 1, 1, 1, 1];
+            for(let i=0; i<size; i++){
+                for(let j=0; j<size; j++){
+                    if(num[i] < num[j])
+                    rank[i]= rank[i]+1;
+                }
+                document.write(num[i] + " 요소의 등수 : " + rank[i]);
+                document.write("<hr>");
+            }
+           
+
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>08_제어문연습문제</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3>제어문 연습문제</h3>
+
+        <script>
+        //문1) 운행거리에 따라 택시 요금을 계산하는 프로그램
+            //    2000m까지는 기본요금 900원이고
+            //    2000m초과 운행시 200m단위마다 기본요금에 100원씩 가산하여 요금을 계산한다
+            // 예1) 운행거리 1600 -> 900원
+            // 예2) 운행거리 3000 -> 1400원
+            // 예3) 운행거리 2900 -> 1400원
+
+        /*let leng ="2201"; // 간거리
+        let cha =""; // 나온요금
+        if(leng<=2000){
+            cha = 900;
+        } else if(leng>2000){
+            cha = 900 + Math.ceil((leng - 2000)/200)*100; 
+        }
+        document.write("택시비 : "+ cha + "원");*/
+
+        /*let distance = 1600; // 운행거리
+        let total = 0; // 전체요금
+        let overfee= 0; //초과요금
+
+        if (distance<=2000) { // 2000m 까지는 기본요금
+            total = 900 ;
+        } else { 
+            let exceed = distance - 2000; // 초과거리
+                                         //  3000-2000=1000
+                                         //  2900-2000=900
+            document.write("초과거리:" + exceed + "<br>");
+            
+            // 초과요금 900 / 200 -> 4.5
+            //         300 / 200 -> 
+            overfee=Math.ceil(exceed/200)*100;
+            total=900+overfee;
+        }
+        document.write("초과거리:" + exceed + "<br>");
+        document.write("기본요금 : 900 <br>");
+        document.write("추가요금"+ overfee +"<br>");
+        document.write("전체요금:" + total + "<br>");*/
+
+        
+        </script>
+
+    </body>
+</html>

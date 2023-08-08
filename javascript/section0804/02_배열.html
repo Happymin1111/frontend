@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>02_배열</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3>배열 Array<h3>
+        <script>
+
+            //참조 https://www.w3schools.com/js/js_arrays.asp
+
+            let kor=[]; //배열 선언
+            kor[0] = 10; // 배열 요소의 인덱스는 0부터 시작된다.
+            kor[1] = 20; // 배열 요소의 인덱스는 1씩 증가한다.
+            kor[2] = 30;
+
+            document.write(kor[0]);
+            document.write(kor[1]);
+            document.write(kor[2]);
+            document.write("<hr>");
+
+            let names=[];
+            names[0]="무궁화";
+            names[1]="개나리";
+            names[2]="잔디";
+            document.write(names[0]);
+            document.write(names[1]);
+            document.write(names[2]);
+            document.write("<hr>");
+
+            // 배열선언
+            // let points=[] // GOOD
+            // let points=new Array() //BAD
+
+            // 배열 선언 및 초기값
+            let points=[40,100,25,3,7];
+            document.write(points[0]); //40
+            document.write(points[1]); //100
+            document.write(points[2]); //25
+            document.write(points[3]); //3
+            document.write(points[4]); //7
+            document.write("<hr>");
+            
+            document.write(points); // 배열 요소인 전체 값 40,100,25,3,7
+            document.write("<hr>");
+            document.write(points.length); // 5
+            document.write("<hr>");
+
+            for(let i=0; i<points.length;i++){
+                document.write(points[i] + "<br>");
+            } // for end
+            document.write("<hr>");
+            // document.write("<hr>" + points[5]); // undefined 5번째 요소는 존재하지 않음.
+
+            for(i in points ){ // in 뒤에는 object (덩어리)
+                document.write(points[i] + "<br>");
+            } // for end
+            document.write("<hr>");
+            ////////////////////////////////////
+
+            let fruits=["Banana","Orange","Apple","Mango"];
+            fruits[6]="Lemon";
+            document.write(fruits.length); //배열요소의 갯수 7 (자바에는 없음)
+            
+            document.write("<hr>");
+            document.write(fruits[6] + "<br>"); // Lemon
+            document.write(fruits[0] +"<br>"); // Banana
+            document.write(fruits[5] +"<br>"); // undefined
+            document.write(fruits[8] +"<br>"); // undefined
+            document.write(fruits[4] +"<br>"); // undefined
+            
+            fruits[8]="kiwi";
+            document.write(fruits.length); // 배열 요소의 개수
+
+
+        </script>
+
+    </body>
+</html>

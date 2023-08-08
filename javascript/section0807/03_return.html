@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>03_return.html</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3> 함수의 return 값</h3>
+        <script>
+
+            function test1(){
+                document.write("SEOUL");
+                return; // 호출시점으로 되돌아 간다.
+                // 맨 마지막 줄의 return은 생략가능하다.
+            }
+
+            function test2 (a){
+                if(a<0){
+                    return;
+                }
+                document.write(a);
+                return; // 맨 마지막 줄의 return은 생략가능하다.
+
+            }
+            function test3 (a,b){
+                let c = a+b;
+                return c;       
+            }
+
+            ///////////////////////////////////////////////////////////////////
+            // 3. 리턴값이 있는 경우
+            test1(); // 함수호출
+
+            test2(3);
+            document.write("<hr>");
+            test2(-5);
+            document.write("<hr>");
+
+            let result=test3(6,7);
+            document.write(result);
+
+            // 값이 상숫값 변수값 함수의 리턴값.
+            document.write(test3(8,9));
+            document.write(Math.abs(-3));
+            document.write(Math.max(2,4));
+            document.write("<hr>");
+            document.write(Math.random());
+            document.write("<hr>");
+
+            // 문1) 펙토리얼 값을 구하시오.
+            
+            function fact(a) {
+                let c = 1;
+                for (i=a;i>=1;i--){
+                    c *= i
+                }
+                return c;
+            }
+           
+
+
+            // 문2) 윤년 평년을 구하시오.
+            function leap (a) {
+                if((a % 4 == 0 && a % 100 != 0) || a % 400 == 0){
+                document.write("윤년");
+            }else{
+                document.write("평년");
+            }
+        }
+        leap(2001);
+        let d =fact(5);
+        document.write(d);
+        fact(5);
+          
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+    </body>
+</html>

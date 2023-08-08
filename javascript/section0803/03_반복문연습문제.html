@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>03_반복문연습문제</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3>반복문 연습문제</h3>
+        <script>
+            //문1) 아래와 같이 출력하시오
+            for(i=1;i<=5;i++){
+                for(j=i;j<=4+i;j++){
+                    document.write(j);
+                }
+                document.write("<br>");
+                
+            }
+
+            document.write("<br>");
+
+
+            //문2)아래 그림과 같이 출력하시오
+            for(i=1;i<=4;i++){
+                for(j=1;j<=4;j++){
+                    if(j==i){
+                        document.write("@");
+                    } else {
+                        document.write("★");
+                    }
+                    
+                }
+                document.write("<br>")
+            }
+
+            document.write("<br>")
+            // 문3) 아래와 같이 누적의 합을 출력하시오.
+            let sum = 0;
+            let ssum = 0;
+            for(i=1;i<=10;i++){
+                for(j=1;j<=10*i;j++){
+                    sum=sum+j;
+                    ssum = sum;
+                }
+                document.write("1+...+"+10*i+"="+ssum + "<br>");
+                sum = 0;
+            }
+
+             // 문3) 아래와 같이 누적의 합을 출력하시오. (강사님 풀이)
+             /*let sum = 0; // 누적의 합
+             for(let a=10; a<=100; a=a+10) {
+                for(let b=1; b<=a; b=b+1){
+                    sum=sum+b; // sum+=b
+                }
+          
+                document.write("1+ .. .+" + a + "=" + sum);
+                document.write("<br>");
+                sum=0; // 초기화
+             }*/
+             
+             /*
+                 a= 10   10 <= 100
+                         b=1 1<=10 sum=0+1
+                         b=2 2<=10 sum=1+2
+                         b=3 3<=10 sum=1+2+3
+                         ...
+                         b=10 10<=10 sum=1+2+3+...+10
+
+                 a= 20  20 <= 100        
+                        b=1  1<=20  sum = 1+2+3+...+10+1
+                        b=2  2<=20  sum = 1+2+3+...+10+1+2
+                        ...
+                        b=20 20<=20  sum = 1+2+3+....10+1+2+...+20
+             */
+                
+        
+
+               
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>01_성적표</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3>성적 프로그램</h3>
+
+        <div id="demo"></div>
+
+        <script>
+
+            // 참조 /section0802/07_성적표.html
+            //문) 5명의 학생을 대상으로 평균, 등수, 과락, 평균10점당 * 한개씩, 장학생을 구한후
+    //    결과값을 표작성해서 id=demo에 출력하시오 (평균기준으로 등수)
+
+    /*
+                            출력결과
+                    --------------------------------------------------------
+                    이름   국어 영어 수학 평균  등수  결과
+                    --------------------------------------------------------
+                    라일락  100  100  100  100  1  합  격 ********** 장학생
+                    진달래   50   55   60   55  4  불합격 *****
+                    개나리   95   95   35   75  3  재시험 *******
+                    무궁화   80   85   90   85  2  합  격 ********
+                    홍길동   60   40   30   43  5  불합격 ****
+                    --------------------------------------------------------
+                    */
+
+    let uname= ["라일락","진달래","개나리","무궁화","홍길동"];
+    let kor  = [100, 50, 95, 80, 60];
+    let eng  = [100, 55, 95, 85, 40];
+    let mat  = [100, 60, 35, 90, 30];
+
+    let size = uname.length; //5
+
+    let result =""; // 결과값
+            result = result + "<table border='1'>";
+            result = result + "<tr>";
+            result = result + "   <th>이름</th>";
+            result = result + "   <td>국어</td>";
+            result = result + "   <td>영어</td>";
+            result = result + "   <td>수학</td>";
+            result = result + "   <td>평균</td>";
+            result = result + "   <td>등수</td>";
+            result = result + "   <td>결과</td>";
+            result = result + "   <td>별개수</td>";
+            result = result + "   <td>장학생여부</td>";
+            result = result + "</tr>";
+
+            result = result + "<tr>";
+            result = result + "   <td>"+uname[0]+"</td>";
+            result = result + "   <td>"+kor[0]+"</td>";
+            result = result + "   <td>"+eng[0]+"</td>";
+            result = result + "   <td>"+mat[0]+"</td>";
+            result = result + "   <td>평균</td>";
+            result = result + "   <td>등수</td>";
+            result = result + "   <td>결과</td>";
+            result = result + "   <td>별개수</td>";
+            result = result + "   <td>장학생여부</td>";
+            result = result + "</tr>";
+
+            result = result + "<tr>";
+            result = result + "   <td>"+uname[1]+"</td>";
+            result = result + "   <td>"+kor[1]+"</td>";
+            result = result + "   <td>"+eng[1]+"</td>";
+            result = result + "   <td>"+mat[1]+"</td>";
+            result = result + "   <td>평균</td>";
+            result = result + "   <td>등수</td>";
+            result = result + "   <td>결과</td>";
+            result = result + "   <td>별개수</td>";
+            result = result + "   <td>장학생여부</td>";
+            result = result + "</tr>";
+
+            result = result + "<tr>";
+            result = result + "   <td>"+uname[2]+"</td>";
+            result = result + "   <td>"+kor[2]+"</td>";
+            result = result + "   <td>"+eng[2]+"</td>";
+            result = result + "   <td>"+mat[2]+"</td>";
+            result = result + "   <td>평균</td>";
+            result = result + "   <td>등수</td>";
+            result = result + "   <td>결과</td>";
+            result = result + "   <td>별개수</td>";
+            result = result + "   <td>장학생여부</td>";
+            result = result + "</tr>";
+
+            result = result + "<tr>";
+            result = result + "   <td>"+uname[3]+"</td>";
+            result = result + "   <td>"+kor[3]+"</td>";
+            result = result + "   <td>"+eng[3]+"</td>";
+            result = result + "   <td>"+mat[3]+"</td>";
+            result = result + "   <td>평균</td>";
+            result = result + "   <td>등수</td>";
+            result = result + "   <td>결과</td>";
+            result = result + "   <td>별개수</td>";
+            result = result + "   <td>장학생여부</td>";
+            result = result + "</tr>";
+
+            result = result + "<tr>";
+            result = result + "   <td>"+uname[4]+"</td>";
+            result = result + "   <td>"+kor[4]+"</td>";
+            result = result + "   <td>"+eng[4]+"</td>";
+            result = result + "   <td>"+mat[4]+"</td>";
+            result = result + "   <td>평균</td>";
+            result = result + "   <td>등수</td>";
+            result = result + "   <td>결과</td>";
+            result = result + "   <td>별개수</td>";
+            result = result + "   <td>장학생여부</td>";
+            result = result + "</tr>";
+            
+            result = result + "</table>";
+
+            document.write(result);
+
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>01_반복문연습문제.html</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3>반복문 연습문제</h3>
+        <script>
+            //문1) 1~3 사이의 모든 수를 더하시오 (누적의 합)
+
+            //문2) 4팩토리얼값을 구하시오 (누적의 곱)
+
+            //문3) 두수사이의 합을 구하시오
+
+            //문4) 1 ~ 5사이 중에서 짝수의 갯수를 구하시오
+
+            //문5) 서기1년 ~ 2023년 사이중에서 윤년의 갯수를 구하시오
+
+            //문6) x값이 10으로부터 x를 여러번 뺀후
+            //     결과값이 음수가 되면 x를 몇번 뺐는가를 구하시오
+
+            //문7) 3의 배수의 누적 합이 100이 넘어가려면 3부터 어디까지 더해야 하는지 구하시오
+
+            /*// 문1) 
+            let b = 0;
+            for(let a=1; a<=10; a++){
+                b = b + a;
+            }
+            document.write(b);
+
+            document.write("<hr>");
+
+            // 문2)
+            let c = 1;
+            for(a=1; a<=4; a++){
+                c = c * a;
+            }
+            document.write(c);
+
+            document.write("<hr>");
+
+            // 문3)
+            let aa = 1;
+            let bb = 4;
+            let sums = 0;
+            let sums1 = 0;
+            for(a=aa; a<=bb; a++)
+            {
+                sums = sums + a;
+            }
+
+            for(a=aa; a<=bb; a--)
+            {
+                sums1 = sums1 + a;
+            }
+            
+            if(aa>=bb){
+                document.write(sums);
+            } else if(aa<bb) {
+                document.write(sums1);
+            }
+            
+
+
+            document.write("<hr>");
+
+            // 문4)
+            let count = 0;
+            for(a=1; a<=5; a++){
+                if(a%2==0){
+                    count = count + 1 ;
+                }
+            }
+            document.write(count);
+
+            document.write("<hr>");
+            
+            
+            // 문5)
+            let count1 = 0;
+            for(a=1; a<=2023; a++){
+                if(a%4==0){
+                    count1 = count1 + 1 ;
+                }
+            }
+            document.write(count1);
+            document.write("<hr>"); */
+
+
+           /* // 문6)
+            let min = 12;
+            let minus = 3;
+            let count4 = 0;
+            while(min >= 0){
+                min = min - minus;
+                count4 = count4 +1 ;
+            }
+            document.write(count4);
+            document.write("<hr>");
+            */
+
+            /*// 문7)
+            let sum22 = 0;
+            let sum11 = 0;
+            let sam = 3;
+            while(sum22<100){
+                sum11 = sum11 + 3;
+                sum22 = sum22 + sum11;
+            }
+            document.write(sum11); */
+
+            //문1) 1~3 사이의 모든 수를 더하시오 (누적의 합)
+            
+            // 생략
+
+
+
+            /*//문2) 4팩토리얼값을 구하시오 (누적의 곱)
+            let gop =1 ; // 결과값
+            for(let a = 4; a>=1; a--){ // a-=1 a-- --a
+                gop = gop * a;
+            }
+            document.write("누적의 곱: " + gop);
+            document.write("<hr>");
+
+
+            //문3) 두수사이의 합을 구하시오 // 스왑 방법 좋네요
+            let start = 1;
+            let end = 10;
+            let sum = 0; // 결과 값
+            let sum1 = 0;
+
+            for(let a=start; a<=end; a=a+1){
+                sum += a;
+            } // for end
+
+            for(let a=start; a>=end; a=a-1){
+                sum1 += a;
+            } // for end
+
+            if(start<end) {
+                document.write(start+"~"+end+"까지의 합 : "+sum);
+            } else if(start>=end){
+                document.write(start+"~"+end+"까지의 합 : "+sum1);
+            }
+            document.write("<hr>");
+
+
+
+
+
+
+
+
+
+
+            //문4) 1 ~ 5사이 중에서 짝수의 갯수를 구하시오
+            let count = 0;
+            for(let a=1; a<=5; a=a+1){
+                if(a%2==0){
+                    count = count + 1;
+                } // if end
+            } // for end
+
+            document.write("짝수의 갯수 : " + count);
+            document.write("<hr>");
+
+
+
+            //문5) 서기1년 ~ 2023년 사이중에서 윤년의 갯수를 구하시오
+            let leap = 0;
+            for(let year=1; year<=2023; year=year+1){
+                if(year%4==0 && year%100!=0 || year%400==0){
+                    leap = leap + 1;
+                } // if end
+            } // for end
+
+            document.write("윤년의 갯수 : " + leap);
+            document.write("<hr>");*/
+
+            /* 윤년 구하는 갯수 */
+
+
+
+            /*//문6) x값이 10으로부터 x를 여러번 뺀후
+            //     결과값이 음수가 되면 x를 몇번 뺐는가를 구하시오
+            
+            let x = 3;
+            let su = 10;
+            let cnt=0; // 결과값
+
+            while(true) { // 무한루프
+                su= su-x;
+                cnt=cnt+1;
+                if(su<0){
+                    break;
+                }
+            }
+
+
+            //문7) 3의 배수의 누적 합이 100이 넘어가려면 3부터 어디까지 더해야 하는지 구하시오*/
+            let num=0; // 3의 배수
+            let add=0; // 누적의 합
+            let str=""; // 출력결과
+
+            while(true){
+                num = num+3; // num+=3;
+                add = add+num; // add += num
+
+                str = str+num+"+";
+                if(add>100){
+                break;
+                }
+            } // while end
+            document.write("3의 배수의 누적의 합 :" +add);
+            
+
+
+        </script>
+
+    </body>
+</html>

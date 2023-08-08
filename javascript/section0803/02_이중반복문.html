@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>02_이중반복문.html</title>
+        <meta charset="UTF-8">
+        <style></style>
+    </head>
+    <body>
+
+        <h3>이중반복문</h3>
+        <script>
+
+            for(let a=1;a<=2; a++){
+                document.write("java");
+
+                for(let b=1;b<=3;b++){
+                    document.write("python");
+                }
+                document.write("<hr>");
+            }
+
+            /* a=1 1<=2 java
+                        b=1 1<=3 python
+                            2<=3 python
+                            3<=3 python
+                            4<=3
+                    2<=2 java
+                        b=1 1<=3 python
+                        b=2 2<=3 python
+                        b=3 3<=3 python
+                        4<=3*/
+                        
+            // 문제) 구구단 2단  출력하기
+            for(let dan=2; dan<=9; dan=dan+1){
+                document.write(dan+"단<br>");
+                for(let an=1; an<=9; an++){
+                    document.write(dan +"x"+an+"="+ (dan*an));
+                    document.write("<br>");
+                }
+                document.write("<hr>");
+               
+            }
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+            // 문제)
+            /*let twos = 0;
+            let thrs = 0;
+            let fivs = 0;
+            let sum = 0;
+            
+            for(let two=1;two<=5;two++){
+                twos=2*two;
+                for(let thr=1; thr<=5;thr++){
+                    thrs=3*thr;
+                    for(let fiv=1; fiv<=5; fiv++){
+                        fivs=5*fiv;
+                        sum = twos+thrs+fivs;
+                        if(sum>=40 && sum <=45){
+                            document.write(twos + "+" + thrs + "+" + fivs +  "=" +sum);
+                            document.write("<br>");
+                        }
+                      
+                    }
+                }
+            }*/
+
+            /*let twos = 0;
+            let thrs = 0;
+            let fivs = 0;
+            let sum = 0;
+            
+            for(let two=1;two<=5;two++){
+                twos=2*two;
+                for(let thr=1; thr<=5;thr++){
+                    thrs=3*thr;
+                    for(let fiv=1; fiv<=5; fiv++){
+                        fivs=5*fiv;
+                        sum = twos+thrs+fivs;
+                        if(sum>=40 && sum <=45){
+                            document.write(twos + "    " + thrs + "    " + fivs +  "    " +sum);
+                            document.write("<br>");
+                        }
+                      
+                    }
+                }
+            } */
+
+            document.write("2g    3g    5g     total<br>");
+            let count = 0;
+            let total=0;
+            for(let a=1; a<=5; a++){
+                for(let b=1; b<=5; b++){
+                    for(let c=1; c<=5; c++){
+                        total =(a*2)+(b*3)+(c*5);
+                        //document.write(total+"<br>");
+                        if(total>=40 && total<=45){
+                            document.write(a + " " + b + " " + c + " " + total+"<br>");
+                            count = count +1; 
+                        }
+                    }
+
+                }
+            }
+            document.write(count);
+            document.write("<hr>"            );
+            // 회전수 증가
+
+            
+            for(a=1;a<=4;a++){
+                for(b=1;b<=a;b++){
+                    document.write("@");
+                }
+                document.write("<br>");
+            }
+            
+            /*
+              a=1 1<=4
+                       b=1 1<=1 @
+                           2<=1
+              a=2 2<=4
+                       b=1 1<=2 @
+                           2<=2 @
+                           3<=2
+              a=3 3<=4 
+                       b=1 1<=3 @
+                           2<=3 @
+                           3<=3 @
+
+              a=4 4<=4 b=1 1<=4 @
+                           2<=4 @
+                           3<=4 @
+                           4<=4 @
+                           5<=4 
+            */
+            document.write("<hr>");
+            document.write(b);
+
+            // 회전수 감소
+            for(a=4;a>=1;a--){
+                for(b=1;b<=a;b++){
+                    document.write("@");
+                }
+                document.write("<br>");
+            } 
+            document.write(b);
+            /*
+
+           
+
+
+
+            */
+
+
+        </script>
+
+    </body>
+</html>
