@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>18_동행복권.html
+        </title>
+    </head>
+    <body>
+
+        <!-- 연습) 동행복권 웹페이지 레이아웃-->
+        <!-- 참조 https://dhlottery.co.kr/store.do?method=sellerInfo645-->
+
+        <div id="wrap">
+            <div id="header">
+                <div>
+                    <span></span>
+                    <img src="../images/스크린샷 2023-07-24 174815.png" width="10%" height="10%">
+                    <input type="button" value="로그인">
+                    <input type="button" value="회원가입">
+                    <input type="button" value="마이페이지">
+                    <input type="button" value="고객센터">
+                </div>
+                <div>
+                    <h1 style="display : none;">대분류</h1>
+                    <u1 style="list-style: none;">
+                        <li>복권구매</li>
+                        <li>복권정보</li>
+                        <li>당첨결과</li>
+                        <li>판매점</li>
+                        <li>이벤트</li>
+                        <li>행복공감</li>
+                    </u1>
+                </div>
+            </div> <!-- header end-->
+            <div id="main"></div> <!-- main end-->
+
+                <div id="sub">
+                    <h2 style="display : none;">중분류</h2>
+                    <span>판매점</span>
+                    <br>
+                    <ul style="list-style: none;">
+                        <li>구입처안내</li>
+                        <li>당첨판매점</li>
+                    </ul>
+                </div> <!-- sub end -->
+
+                <div id="content">
+                    <h3 style ="display: none;">소분류</h3>  
+                    <span>로또6/45판매점 조회</span>
+                    <table border="1">
+                        <tr>
+                            <td>
+                                <strong>지역으로 검색</strong>
+                                <br>
+                                <form action="ok1.jsp">
+                                    <select name="sido" id="sido">
+                                        <option value="">시/도선택</option>
+                                        <option value="k">경기</option>
+                                        <option value="se" selected>서울</option>
+                                        <option value="bu">부산</option>
+                                    </select>
+                                    <select name="gugun" id="gugun">
+                                        <option value="">구/군선택</option>
+                                        <option value="k">종로구</option>
+                                        <option value="se" selected>강남구</option>
+                                        <option value="bu">마포구</option>
+                                    </select>
+                                    <input type="button" value="조회">
+                                </form>
+                            </td>
+                            <td>
+                                <strong>상호/지역 (읍/면/동)으로 검색</strong>
+                                <br>
+                                <form action="ok2.jsp">
+                                    <select id="sangho" name="sangho">
+                                        <option>상호</option>
+                                        <option>지역(읍/면/동)</option>
+                                    </select>
+                                    <input type="text" id="keyword" name="keyword">
+                                    <input type="button" value="조회">
+                                </form>
+                            </td>
+                        </tr>
+                  
+                    </table>
+                    <hr>
+                    <table border="1">
+                        <tr>
+                            <th>상호명</th>
+                            <th>전화번호</th>
+                            <th>소재지</th>
+                            <th>위치보기</th>
+                        </tr>
+                        <tr>
+                            <td>도곡로또방</td>
+                            <td>012-345-6789</td>
+                            <td>서울 강남구 도곡로4길</td>
+                            <td>
+                                <a href="https://itwill.co.kr"><img src="../images/search.png"></a>
+                            </td>
+                            
+                        <tr>
+                            <td>신사우리가판</td>
+                            <td>012-345-9876</td>
+                            <td>서울 강남구 도곡로5길</td>
+                            <td>
+                                <a href="https://itwill.co.kr"><img src="../images/search.png"></a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>왕배고팡</td>
+                            <td>012-987-9876</td>
+                            <td>ㅋㅋㅋㅋㅋㅋㅋ</td>
+                            <td>
+                                <a href="https://itwill.co.kr"><img src="../images/search.png"></a>
+                            </td>
+                        </tr>
+                    </table>
+                    <hr>
+
+
+                </div> <!-- content end-->
+            </div> <!-- id wrap 끝-->
+            <div id="footer">
+                <h1 style="display :none;">꼬리말</h1>
+                <ol style="list-style: none;">
+                    <li>이용약관</li>
+                    <li>개인정보 처리방침</li>
+                    <li>인쇄복권당첨금지급기준</li>
+                </ol>
+                주소 : 12345 서울 서초구 북부순환로 1004 
+            </div> <!-- footer end-->
+
+        
+
+
+    </body>
+</html>
