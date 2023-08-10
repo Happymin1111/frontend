@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+    <head> 
+        <title>01_이미지스크롤.html</title>
+        <meta charset="UTF-8">
+        <style>
+            /*#mydiv {
+                position: relative;
+                left 100px;
+                top 10px;
+                width: 800px;
+                height: 100px;
+                background-color: hotpink;
+            }*/
+            #mydiv {
+                position: relative;
+                left 100px;
+                top 10px;
+                width: 280px; /* 8) 가로 영역 크기 줄이기 */
+                height: 100px;
+                background-color: white; /* 9) 배경색을 흰색으로 바꾸기 */
+                overflow: hidden;
+            }
+        </style>
+        <script>
+            //1)스크롤하고자 하는 이미지를 전역변수에 저장
+            let ctnt=[];
+            ctnt[0]="<img src='../../images/monkey.png' width='85'>";
+            ctnt[1]="<img src='../../images/mouse.png' width='85'>";
+            ctnt[2]="<img src='../../images/k7.png' width='85'>";
+            ctnt[3]="<img src='../../images/appleGreen.png' width='85'>";
+            ctnt[4]="<img src='../../images/crying.png' width='85'>";
+            ctnt[5]="<img src='../../images/coffee.png' width='85'>";
+            ctnt[6]="<img src='../../images/flower2.png' width='85'>";
+            ctnt[7]="<img src='../../images/heart.png' width='85'>";
+
+
+            //2) 1)에서 준비한 이미지를 id=mydiv에 배치하기.
+            function start(){
+                //alert();
+
+                for(let i=0; i<ctnt.length; i++){
+                document.write("<div id='area"+i+"' style='position: absolute; top:0; left:"+90*i+"px;'>");
+                document.write(ctnt[i]);
+                document.write("</div>");
+                }
+            
+                /*
+                document.write("<div id='area1' style='position: absolute; top:0; left:90px;'>");
+                document.write(ctnt[1]);
+                document.write("</div>");
+
+                document.write("<div id='area2' style='position: absolute; top:0; left:180px;'>");
+                document.write(ctnt[2]);
+                document.write("</div>");
+                */
+
+
+            }
+
+            // 3) 3초 후에 scroll 함수 1번 호출
+            setTimeout(scroll,3000);
+
+    
+            function scroll() {
+                // alert("scroll 함수 호출");
+                // alert(document.getElementById("area0")); // [object HTMLDivElement]
+                // alert(document.getElementById("area0").style);// [object CSSStyleDdeclaraion]
+                //alert(document.getElementById("area0").style.left); // 0px
+
+                //5) id=area0의 스타일을 가져와서 왼쪽여백값을 10px만큼 줄이기
+                for(i=0;i<ctnt.length;i++){
+                let tmp = document.getElementById("area"+i).style;
+                tmp.left = (parseInt(tmp.left)-10) + "px";
+                if(parseInt(tmp.left)<=-90){
+                    tmp.left = 630 + "px";
+                }
+                }
+
+           
+                
+            
+
+            //6 0.5초후에 scroll 함수 호출
+           timer=setTimeout(scroll,500);
+                
+        }
+
+        // 12)  6)의 시간을 해체
+        var timer; // 전역변수
+
+        function killtime(){
+            clearTimeout(timer);
+        }
+
+            
+
+
+        </script>
+    </head>
+    <!-- 13) -->
+    <body onunload="killtime()">
+
+        <h3> 이미지스크롤 </h3> <!-- 11번-->
+
+        <input type="button" value="이미지 스크롤 중지" onclick="killtime()">
+
+        <!-- 이미지가 스크롤 되는 위치-->
+        <div id="mydiv">
+            <script> start();</script>
+        </div>
+        
+        
+
+    </body>
+</html>
